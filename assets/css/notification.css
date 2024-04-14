@@ -1,0 +1,119 @@
+/* Notification */
+.nav__block-item--notification {
+    position: relative;
+}
+
+.notification {
+    position: absolute;
+    width: 404px;
+    background-color: var(--white-color);
+    top: 140%;
+    right: 0;
+    color: var(--black-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotificationGrowth ease-in 0.2s;
+    -webkit-animation: headerNotificationGrowth ease-in 0.2s;
+    -ms-zoom-animation: headerNotificationGrowth ease-in 0.2s;
+    -moz-animation: headerNotificationGrowth ease-in 0.2s;
+    -o-animation: headerNotificationGrowth ease-in 0.2s;
+    will-change: opacity, transform;
+    display: none;
+    z-index: 2;
+}
+
+.notification::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    top: -6%;
+    right: 0;
+    height: 10%;
+}
+
+.notification::after {
+    content: "";
+    position: absolute;
+    border-width: 20px 27px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    top: -28px;
+    right: 4px;
+}
+
+.nav__block-item--notification:hover .notification {
+    display: block;
+}
+
+.notification__header {
+    display: block;
+    padding: 0 14px;
+    font-size: 1.4rem;
+    color: #ACACAC;
+    font-weight: 500;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.notification__list {
+    list-style: none;
+    padding: 0 0;
+    background-color: rgba(232, 252, 246, 0.5);
+    height: 56vh;
+    overflow-y: scroll;
+}
+
+.notification__item {
+    display: flex;
+    padding: 12px 12px;
+}
+
+.notification__item:hover {
+    background-color: rgba(172, 172, 172, 0.2);
+}
+
+.notification__img {
+    width: 50px;
+    object-fit: contain;
+}
+
+.notification__item--info {
+    width: 100%;
+    margin-left: 12px;
+}
+
+.notification__title {
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 0 0;
+}
+
+.notification__desc {
+    font-size: 1.2rem;
+    color: #616060;
+    margin: 4px 0 0 0;
+    display: -webkit-box;
+    max-height: 32px;
+    line-height: 1.6rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.notification__footer {
+}
+
+.notification__footer--btn {
+    display: block;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 0 0;
+    padding: 12px 0;
+    color: var(--black-color);
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}

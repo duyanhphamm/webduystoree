@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuyStore - log in or sign up</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/logostoreblue.png">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <script src="../assets/js/login.js"></script>
+</head>
+<body>
+    <div class="login__signup">
+        <div class="title">
+            <img src="../assets/img/logo/logo.png" alt="" class="title__img">
+            <span class="title__desc">Uy tín làm nên thương hiệu</span>
+        </div>
+
+        <form onsubmit="login(); return false;" class="wrap">
+            <div class="wrap__login">
+                <input type="text" autocomplete="username" class="login__input" id="usernameJs" name="username" placeholder="Tên tài khoản hoặc email...">
+            </div>
+            
+            <div class="wrap__login">
+                <input type="password" autocomplete="password" class="login__input" id="passwordJs" name="password" placeholder="Mật khẩu">
+            </div>
+
+            <div class="wrap__login">
+                <button type="submit" class="login__btn">Đăng nhập</button>
+            </div>
+
+            <div class="apart"></div>
+            
+            <div class="wrap__login">
+                <a href="./signup.html" class="login__btn-signup">Đăng ký</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

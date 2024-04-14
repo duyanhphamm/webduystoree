@@ -1,0 +1,340 @@
+#app {
+
+}
+
+#header {
+    height: var(--header-height);
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 8px -2px 7px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.nav {
+    height: var(--navbar-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.nav .nav__block {
+    display: block;
+}
+
+.nav .nav__block-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav .nav__block-item {
+    display: inline-block;
+    padding: 8px 14px;
+}
+
+.nav .nav__block-item:hover {
+    background-color: #e8fdf6;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.nav .nav__block-item:hover .nav__list-link,
+.nav .nav__block-item:hover .nav__list--icon {
+    color: #6ABFA5;
+    transition: linear 0.5s;
+}
+
+.nav .nav__block-item.active {
+    border-radius: 8px;
+}
+
+.nav .nav__block-item.active .nav__list-link,
+.nav .nav__block-item.active .nav__list--icon {
+    color: var(--primary-color);
+}
+
+.nav .nav__list-link {
+    text-decoration: none;
+    color: rgb(128, 128, 137);
+    font-size: 1.6rem;
+    font-weight: 550;
+}
+
+.nav .nav__list--icon {
+    margin: 2px;
+    color: rgb(128, 128, 137);
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+}
+
+.header-main .logo {
+    width: 210px;
+    user-select: none;
+}
+
+.header-main .logo__store {
+    height: 75px;
+    user-select: none;
+}
+
+.header__cart {
+    width: 146px;
+    text-align: center;
+}
+
+.header__cart .header__cart-wrap {
+
+}
+
+.header__cart .header__cart-icon {
+    position: relative;
+    font-size: 24px;
+    color: rgb(128, 128, 137);
+}
+
+.header__cart .header__cart-notice {
+    position: relative;
+    background-color: var(--primary-color);
+    font-size: 1.4rem;
+    color: var(--white-color);
+    border-radius: 20px;
+    padding: 1px 8px;
+    top: -20px;
+    right: 14px;
+    border: 2px solid var(--white-color);
+    user-select: none;
+}
+
+
+.header__cart-details {
+    width: 400px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+
+body.show-cart .header__cart-details{
+    inset: 0 0 0 auto;
+}
+
+.product-cart__wrap .product-cart__qty span:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+
+.product-cart__wrap .product-cart__item:nth-child(event) {
+    background-color: #eee1;
+}
+
+.product-cart__wrap {
+    overflow: auto;
+}
+
+.product-cart__wrap::-webkit-scrollbar {
+    width: 0;
+}
+
+.header__cart-details .product-cart__wrap .product-cart__item .product-cart-img {
+
+}
+
+.product-cart__item {
+    padding: 6px;
+    
+}
+
+.header__cart-details .product-cart__wrap .product-cart__item {
+    display: grid;
+    grid-template-columns: 52px 180px 54px 74px;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.product-cart-img {
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+}
+
+.product-cart__qty span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #555;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.header__cart-total {
+    font-size: 1.4rem;
+    text-align: right;
+    margin-right: 14px; 
+}
+
+
+.header-cart-btn-wrap {
+    display: flex;
+}
+
+.header__cart-close-btn,
+.header__cart-order-btn {
+    display: block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 0 0;
+    padding: 12px 0;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+}
+
+.header__cart-order-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+
+}
+
+.home-filter {
+    background-color: #ededed;
+    display: flex;
+    align-items: center;
+    padding: 13px 0;
+    border-radius: 2px;
+}
+
+.home-filter__label {
+    font-size: 1.4rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: var(--text-color);
+}
+
+.home-filter__label-btn {
+    min-width: 90px !important;
+    margin-right: 20px;
+    font-size: 1.4rem !important;
+}
+
+.home-filter__page {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.select-input {
+    position: relative;
+    background-color: #FDFDFD;
+    height: 34px;
+    border-radius: 2px;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+.select-input:hover .select-input-list {
+    display: block;
+}
+
+.select-input-label {
+    margin-left: 12px;
+}
+
+.select-input-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% - -1px);
+    background-color: var(--white-color);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    z-index: 1;
+    border-radius: 2px;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.05);
+}
+
+.select-input-item {
+    padding: 10px 10px;
+}
+
+.select-input-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 5px 0;
+    display: block;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.select-input-link:hover {
+    color: var(--primary-color);
+}
+
+
+.home-filter-page-num {
+    font-size: 1.4rem;
+    margin: 0 20px;
+}
+
+.home-filter-page-current {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.home-filter__page-control {
+    width: 72px;
+    background-color: #FDFDFD;
+    display: flex;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.home-filter__page-btn {
+    height: 34px;
+    flex: 1;
+    display: flex;
+    text-decoration: none;
+}
+
+.home-filter__page-btn:focus {
+    background-color: #ededed;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.home-filter__page-btn:first-child {
+    border-right: 1px solid #EDEDED;
+}
+
+.home-filter__page-btn-icon {
+    margin: auto;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.header__search-selection-icon {
+    font-size: 1rem;
+    margin-right: 8px;
+}
